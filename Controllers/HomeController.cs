@@ -1,6 +1,8 @@
 ﻿using classReminder.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using MongoDB.Bson;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -16,6 +18,16 @@ namespace classReminder.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+
+
+            var settings = new MongoClient("mongodb+srv://admin:admin@cluster0.6vdu6.mongodb.net/classReminder?retryWrites=true&w=majority");
+           // var client = new MongoClient(settings);
+            var database = settings.GetDatabase("classReminder");
+            var getCollection = database.GetCollection<scheduleModel>("classReminder");
+
+
+            List<scheduleModel> scheduleModels = getCollection.Find(x => x.ReminderName != null).ToList();
+
         }
 
         public IActionResult Index()
