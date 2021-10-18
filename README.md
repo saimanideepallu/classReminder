@@ -7,3 +7,5 @@
 [Link For Request For Proposal](https://github.com/harshakurra123/ClassRemainder)
 
 [Link for the Proposal](https://github.com/giridhar196/proposal/blob/main/Proposal.md)
+
+[Client Acceptance](https://github.com/giridhar196/classReminder/issues/1)
