@@ -1,6 +1,6 @@
 {
   "name": "Class Reminder",
-  "short_name": "Reminders",
+  "short_name": "Reminder",
   "scope": "/",
   "start_url": "/",
   "display": "standalone",
