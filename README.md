@@ -10,4 +10,5 @@
 
 [Client Acceptance](https://github.com/giridhar196/classReminder/issues/1)
 
-[Work Planning](https://github.com/giridhar196/classReminder/issues)
+
+[Link to board](https://github.com/giridhar196/classReminder/projects/1)
