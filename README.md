@@ -9,3 +9,5 @@
 [Link for the Proposal](https://github.com/giridhar196/proposal/blob/main/Proposal.md)
 
 [Client Acceptance](https://github.com/giridhar196/classReminder/issues/1)
+
+[Work Planning](https://github.com/giridhar196/classReminder/issues)
