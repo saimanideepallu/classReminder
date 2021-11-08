@@ -1,0 +1,144 @@
+﻿
+@{
+    ViewBag.Title = "AddEvents";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Add Events</h6>
+    </div>
+    <div class="card-body">
+        <form id="AddEvent" method="post" enctype="multipart/form-data"  onsubmit="return AjaxPost(this)">
+            <div class="form-row">
+                @Html.AntiForgeryToken()
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Event Name</label>
+                    <input type="text" class="form-control" name="EventName" id="EventName" placeholder="Enter Event Name">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Location</label>
+                    <input type="text" class="form-control" name="Location" id="Location" placeholder="Enter Location">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputAddress">Date</label>
+                    <input type="date" class="form-control" name="Date" id="Date" autocomplete="off">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="card form-group col-md-12">
+                    <div class="card-body">
+                        <input type="checkbox" name="Recarsive" id="Recarsive" /> Recarsive </br>
+                        <input type="checkbox" name="M" id="M" disabled /> M
+                        <input type="checkbox" name="T" id="T" disabled /> T
+                        <input type="checkbox" name="W" id="W" disabled /> W
+                        <input type="checkbox" name="TH" id="TH" disabled /> TH
+                        <input type="checkbox" name="F" id="F" disabled /> F </br>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputStartDate">Start Date</label>
+                                <input type="datetime-local" class="form-control" name="StartDate" id="StartDate" placeholder="Enter start date " disabled>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputEndDate">End Date</label>
+                                <input type="datetime-local" class="form-control" name="EndDate" id="EndDate" placeholder="Enter end date" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputUploadImage">Upload Image</label>
+                <div class="custom-file">
+                    <input type="file" name="ImageFile" id="ImageFile" accept="image/png, image/jpeg">
+                </div>           
+            </div>
+                     
+            <button class="btn btn-primary">Save</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#Recarsive").change(function () {
+            var status = $('#Recarsive').is(":checked")
+            ClearRecarsive();
+            if (status) {
+                $("#Date").val("");
+                $("#Date").prop('disabled', true);
+                $("#M").prop('disabled', false);
+                $("#T").prop('disabled', false);
+                $("#W").prop('disabled', false);
+                $("#TH").prop('disabled', false);
+                $("#F").prop('disabled', false);
+                $("#StartDate").prop('disabled', false);
+                $("#EndDate").prop('disabled', false);
+
+            } else {
+                ClearRecarsive();
+                $("#Date").val("");
+                $("#Date").prop('disabled', false);
+                $("#M").prop('disabled', true);
+                $("#T").prop('disabled', true);
+                $("#W").prop('disabled', true);
+                $("#TH").prop('disabled', true);
+                $("#F").prop('disabled', true);
+                $("#StartDate").prop('disabled', true);
+                $("#EndDate").prop('disabled', true);
+            }
+        });
+    });
+
+    function AjaxPost(formData) {
+        var ajaxConfig = {
+            type: "POST",
+            URL: '@Url.Action("AddEvents", "Home")',
+            data: new FormData(formData),
+            success: function (result) {
+                if (result != undefined) {
+
+                    var uploadStatus = result.Status;
+                    if (uploadStatus == true) {
+                        swal({
+                            title: "Success!",
+                            text: "Saved and successfully",
+                            icon: "success",
+                            button: "OK",
+                        });
+
+                        window.location.href ='@Url.Action("AddEvents", "Home")'
+
+                    } else {
+                        swal({
+                            title: "Error!",
+                            text: "Please contact the system administrator!",
+                            icon: "error",
+                            button: "OK",
+                        });
+                    }
+                }
+            }
+        }
+        if ($(formData).attr('enctype') == "multipart/form-data") {
+            ajaxConfig["contentType"] = false;
+            ajaxConfig["processData"] = false;
+        }
+        $.ajax(ajaxConfig);
+        return false;
+    }
+
+    function ClearRecarsive() {
+        $("#StartDate").val("");
+        $("#EndDate").val("");
+        $("#M").prop('checked', false);
+        $("#T").prop('checked', false);
+        $("#W").prop('checked', false);
+        $("#TH").prop('checked', false);
+        $("#F").prop('checked', false);
+
+    }
+</script>

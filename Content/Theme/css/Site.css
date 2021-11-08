@@ -1,0 +1,15 @@
+﻿body {
+    padding: 0;
+    background: url("../img/pawbg.png") #E6E7E8;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+.bg-primary{
+    color: white !important;
+    background-color: #006747 !important;
+   
+    border-color: #006747;
+}

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Class Reminder</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="~/Content/Theme/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="~/Content/Theme/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="~/Content/Theme/css/showPrimaryEvent.css" rel="stylesheet">
+    <script src="~/Content/Theme/vendor/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="~/Content/Theme/vendor/jquery/moment.min.js"></script>
+
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Class Reminder</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <partial name="_LoginPartial" />
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="@Url.Action("Index","Home")" >Home</a>
+                        </li>
+                        <li class="nav-item"> <a class="nav-link" href="@Url.Action("ViewEvents","View Events")">View Events</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - classReminder - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> | <a href="https://github.com/giridhar196/classReminder">Link to Development Repo </a> | <a href="https://github.com/giridhar196/proposal/blob/main/Proposal.md">Link to Proposal (1B)</a> | <a href="https://github.com/giridhar196/classReminder/projects/1">Link to board </a>
+        </div>
+    </footer>
+</body>
+</html>
