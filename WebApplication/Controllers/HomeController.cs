@@ -34,10 +34,6 @@ namespace WebApplication.Controllers
             }
 
         }
-        public ActionResult ShowPrimaryEvent()
-        {
-            return View();
-        }
 
         public ActionResult AddEvents()
         {
