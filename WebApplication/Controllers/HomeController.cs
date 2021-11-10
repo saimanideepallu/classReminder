@@ -39,6 +39,10 @@ namespace WebApplication.Controllers
         {
             return View();
         }
+        public ActionResult ShowPrimaryEvent()
+        {
+            return View();
+        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
