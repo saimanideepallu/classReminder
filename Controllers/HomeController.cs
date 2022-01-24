@@ -1,45 +1,35 @@
-﻿using classReminder.Models;
+﻿using Event_Management.Models;
+using Event_Management.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using MongoDB.Bson;
-using MongoDB.Driver;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace classReminder.Controllers
+namespace Event_Management.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly EventService _eventService;
+        public HomeController(ILogger<HomeController> logger, EventService eventService)
         {
             _logger = logger;
-
-
-            var settings = new MongoClient("mongodb+srv://admin:admin@cluster0.6vdu6.mongodb.net/classReminder?retryWrites=true&w=majority");
-           // var client = new MongoClient(settings);
-            var database = settings.GetDatabase("classReminder");
-            var getCollection = database.GetCollection<scheduleModel>("classReminder");
-
-
-            List<scheduleModel> scheduleModels = getCollection.Find(x => x.ReminderName != null).ToList();
-
-        }
+            _eventService = eventService;
+        }        
 
         public IActionResult Index()
         {
-            return View();
-        }
 
-        public IActionResult Privacy()
-        {
-            return View();
+            List<EventModel> list = new List<EventModel>();
+            if (HttpContext.Session.GetString("UserId") != null)
+            {
+                var userId = HttpContext.Session.GetString("UserId");
+                list = _eventService.SearchList(userId);
+            }
+            return View(list);
         }
-
+                    
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
