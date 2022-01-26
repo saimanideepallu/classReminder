@@ -11,7 +11,10 @@ a.navbar-brand {
 a {
   color: #0366d6;
 }
-
+body {
+    padding: 0;
+    background: url("../pawbg.png") #E6E7E8;
+}
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
@@ -19,11 +22,47 @@ a {
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: white !important;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+#bearcat_alert a.btn {
+    margin-top: 15px;
+}
+.navbar-brand, .nav-item, .nav-link {
+    color: white !important;
+}
+.img-home {
+    max-width: -webkit-fill-available;
+}
+.bg-primary {
+    color: white !important;
+    background-color: #006747 !important;
+    border-color: #006747;
+}
+#bearcat_alert {
+    background-color: #FFC420;
+    clear: both;
+    display: block;
 }
 
+.right-home {
+    padding: 4.25rem 10.5%;
+}
+
+#bearcat_alert_msg {
+    width: 70%;
+    min-width: 1000px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.2em;
+}
+
+    #bearcat_alert_msg .h1 {
+        color: #000;
+        font-size: 24px;
+        margin-bottom: 0;
+    }
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
