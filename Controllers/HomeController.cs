@@ -3,6 +3,7 @@ using Event_Management.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 
@@ -12,6 +13,7 @@ namespace Event_Management.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly EventService _eventService;
+        public DateTime? arrival { get { return DateTime.Now; } }
         public HomeController(ILogger<HomeController> logger, EventService eventService)
         {
             _logger = logger;
