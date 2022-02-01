@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Event Management</title>
+    <title>@ViewData["Title"] - Class Reminder</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -12,7 +12,7 @@
     <header>
 
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow mb-3">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Event Management</a>
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Class Reminder</a>
             <button class="navbar-toggler" type="button"
                     data-toggle="collapse"
                     data-target="#navbarSupportedContent"
@@ -47,20 +47,48 @@
                     }
                 </div>
             </div>
-        </nav>     
+        </nav>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - classReminder - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> | <a href="https://github.com/giridhar196/classReminder">Link to Development Repo </a> | <a href="https://github.com/giridhar196/proposal/blob/main/Proposal.md">Link to Proposal (1B)</a> | <a href="https://github.com/giridhar196/classReminder/projects/1">Link to board </a>
-        </div>
-    </footer>
-
+    <section class="footer">
+        <!-- Footer -->
+        <footer class="text-center text-white bg-primary">
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+                <!-- Section: CTA -->
+                <section class="">
+                    <div class="col-md-12 col-xs-12 col-sm-12 d-flex justify-content-center align-items-center">
+                        <div class="row">
+                            <div class="col-md col-sm-3 col-xd-3">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </div>
+                            <div class="col-md col-sm-3 col-xd-3">
+                                <a class="nav-link text-dark" href="https://github.com/giridhar196/classReminder">Link to Development Repo </a>
+                            </div>
+                            <div class="col-md col-sm-3 col-xd-3">
+                                <a class="nav-link text-dark" href="https://github.com/giridhar196/proposal/blob/main/Proposal.md">Link to Proposal (1B)</a>
+                            </div>
+                            <div class="col-md col-sm-3 col-xd-3">
+                                <a class="nav-link text-dark" href="https://github.com/giridhar196/classReminder/projects/1">Link to issue board </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Section: CTA -->
+            </div>
+            <!-- Grid container -->
+            <!-- Copyright -->
+            <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2020 Copyright: Class Reminder
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </section>
     @*<script src="https://code.jquery.com/jquery-3.6.0.js"></script>*@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

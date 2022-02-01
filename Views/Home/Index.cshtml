@@ -11,21 +11,22 @@
     }
 </style>
 @{
-    <div class="card" style="width: 18rem;"role="main" id="bearcat_alert">
-        <img class="card-img-top" src="~/FASFA-Homepage-Graphic-22-23-01.jpg" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">P&F Class.</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item bg-primary">Location: <span>Colden hall</span></li>
-            <li class="list-group-item bg-primary">Date: <span> @DateTime.Today</span></li>
-        </ul>
-        <div class="card-body">
-            <a href="#" class="card-link">See more</a>
+    <div class="pt-5 ">
+        <div class="card" style="width: 18rem;" role="main" id="bearcat_alert">
+            <img class="card-img-top" src="~/FASFA-Homepage-Graphic-22-23-01.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">P&F Class.</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-primary">Location: <span>Colden hall</span></li>
+                <li class="list-group-item bg-primary">Date: <span> @DateTime.Today</span></li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link">See more</a>
+            </div>
         </div>
     </div>
-    
     if (User.Identity.IsAuthenticated != false)
     {
         if (Model != null)

@@ -18,41 +18,48 @@
 {
     <div class="p-1 mb-2 bg-success text-white">@ViewBag.Message</div>
 }
-<div class="col d-flex justify-content-center">
-    <div class="card shadow mb-4">
+<form asp-action="Create">
+    <section style="background-color: #FFC420;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                        <div class="card-body p-5">
+                            <h3 class="mb-5">Register</h3>
+                            <div class="form-outline mb-4">
+                                <label asp-for="Name" class="control-label"></label>
+                                <input asp-for="Name" class="form-control form-control-lg" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
 
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Register</h6>
+                            <div class="form-outline mb-4">
+                                <label asp-for="Email" class="form-label"></label>
+                                <input asp-for="Email" class="form-control form-control-lg" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <label asp-for="Password" class="form-label"></label>
+                                <input asp-for="Password" class="form-control form-control-lg" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <button class="btn btn-primary btn-lg btn-block" type="submit">Register</button>
+                            <div class="text-danger" asp-validation-summary="All"></div>
+                            @if (ViewBag.Message != null)
+                            {
+                                <div class="p-1 mb-2 text-success">@ViewBag.Message</div>@Html.ActionLink("Login", "Login", "Account")
+                            }
+                            else
+                            {
+                                @Html.ActionLink("Login", "Login", "Account")
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="card-body">
-            <form asp-action="Create">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="form-group">
-                    <label asp-for="Name" class="control-label"></label>
-                    <input asp-for="Name" class="form-control" />
-                    <span asp-validation-for="Name" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Email" class="control-label"></label>
-                    <input asp-for="Email" class="form-control" />
-                    <span asp-validation-for="Email" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Password" class="control-label"></label>
-                    <input asp-for="Password" class="form-control" />
-                    <span asp-validation-for="Password" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Create" class="btnSubmit btn btn-primary" />
-                </div>
-            </form>
-        </div>
-    </div>
-
-</div>
-
-
-
+    </section>
+</form>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
