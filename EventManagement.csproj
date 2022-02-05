@@ -31,4 +31,8 @@
     <Folder Include="wwwroot\Image\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="EventManagement.sln" />
+  </ItemGroup>
+
 </Project>
