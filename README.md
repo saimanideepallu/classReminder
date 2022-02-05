@@ -28,6 +28,7 @@
 # Testing
 
 - Under actions you can find the automated test yaml running and updated. 
+- [Sonar Test Report](https://sonarcloud.io/project/overview?id=giridhar196_classReminder)
 
 # Useful Links.
 
