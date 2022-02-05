@@ -10,10 +10,13 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace Event_Management.Controllers
 {
-    [Authorize]
+    [Route("api/[controller]")]
+    [ApiController]
+    //[Authorize]
     public class EventsController : Controller
     {
 
@@ -25,6 +28,8 @@ namespace Event_Management.Controllers
             _hostEnviroment = hostEnviroment;
         }
 
+        [HttpGet]
+        [Route("Index")]
         public IActionResult Index()
         {
             List<EventModel> list = new List<EventModel>();
@@ -36,12 +41,15 @@ namespace Event_Management.Controllers
             return View(list);
         }
 
+        [HttpGet]
+        [Route("Create")]
         public IActionResult Create()
         {
             return View();
         }
 
         [HttpPost]
+        [Route("Create/events")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(EventsCreateViewModel events)
         {
@@ -135,6 +143,8 @@ namespace Event_Management.Controllers
             return RedirectToAction("Index", "Events");
         }
 
+        [HttpPut]
+        [Route("Edit/Id")]
         public IActionResult Edit(string Id)
         {
             var evd = _eventService.Get(Id);
@@ -184,6 +194,7 @@ namespace Event_Management.Controllers
         }
 
         [HttpPost]
+        [Route("Edit/events")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(EventsCreateViewModel events)
         {
@@ -284,6 +295,8 @@ namespace Event_Management.Controllers
             return RedirectToAction("Index", "Events");
         }
 
+        [HttpDelete]
+        [Route("Delete/id")]
         public IActionResult Delete(string id)
         {
             var item = _eventService.Get(id);
@@ -292,6 +305,7 @@ namespace Event_Management.Controllers
         }
 
         [HttpPost]
+        [Route("DeleteConfirm/id")]
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirm(string id)
         {
