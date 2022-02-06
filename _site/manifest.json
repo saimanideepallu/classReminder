@@ -1,0 +1,433 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/girid/OneDrive/Desktop/GDP/classReminder",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html",
+          "hash": "Ac6sfJh4mZRRPuqkDUVH4iPEbJSC5vFv0rjhtWXe/Qw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "SECURITY.md",
+      "output": {
+        ".html": {
+          "relative_path": "SECURITY.html",
+          "hash": "IFFE45VmraL7kG8YqxWjfp2ZiH8aS3C4nsqVLfTnNoY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Event_Management.Controllers.AccountController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Event_Management.Controllers.AccountController.html",
+          "hash": "nScstAJt+yBivi88qsP9qzOaeln8HDuuZxuZWpO4M1A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Event_Management.Controllers.EventsController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Event_Management.Controllers.EventsController.html",
+          "hash": "IZDkDd3V17ms7J24TFzrQ/oSk2V1+EmcViDJ3Ez+VXo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Event_Management.Controllers.HomeController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Event_Management.Controllers.HomeController.html",
+          "hash": "R+5V+/kFyWmh3FpS4T1reaLBKgUPZPW6u7kwbMSAtrk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Event_Management.Controllers.UserController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Event_Management.Controllers.UserController.html",
+          "hash": "naYji6c+UiZ1Ho9a1jWyUKQ8pI4F58Kr57Fn+MGlftY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Event_Management.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Event_Management.Controllers.html",
+          "hash": "dp5vYl/HiLPpbYpzk6BYgRSmQ6coSy2TY+86PMPchY0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Event_Management.Models.ApplicationRole.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Event_Management.Models.ApplicationRole.html",
+          "hash": "+tJj8ihSK7drAz6FOoed1GjbfUiR5/CNu2m0i0EL578="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Event_Management.Models.ApplicationUser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Event_Management.Models.ApplicationUser.html",
+          "hash": "9YaJCk55bOLYFKrA4I7gNAHBMyZWBgm6tzIAMZKZQn0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Event_Management.Models.ErrorViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Event_Management.Models.ErrorViewModel.html",
+          "hash": "fGJEaovoTu2EtVcjAv9lKwC5FPsrMubIrzzlMh7Ardo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Event_Management.Models.EventModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Event_Management.Models.EventModel.html",
+          "hash": "aEGPWRxh8HqR0lqnpyKUF+nBRZR/bmHgSCMPwSWHi1U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Event_Management.Models.EventsCreateViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Event_Management.Models.EventsCreateViewModel.html",
+          "hash": "O8Clk+p70jRnlhjdhrqePPqHLDCjW8IxjW45zgwv9ek="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Event_Management.Models.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Event_Management.Models.User.html",
+          "hash": "fj1cre5osV37Ou+vGjQY5BGXTwsc9zDhUEjam7yL7BU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Event_Management.Models.UserRole.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Event_Management.Models.UserRole.html",
+          "hash": "S9rvTDDchxDjoi4SxLb47nw9J9BopQc72BgQQlfhY0M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Event_Management.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Event_Management.Models.html",
+          "hash": "zAvR0QtWrMvOzj1CatiHru6EKvrVi4TAn+vJb3VkG8M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Event_Management.MongodbContext.DatabaseSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Event_Management.MongodbContext.DatabaseSettings.html",
+          "hash": "LcJk174VsZZwly/FrFFyORjcN3V8uLA2mI85JRnN9iU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Event_Management.MongodbContext.IDatabaseSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Event_Management.MongodbContext.IDatabaseSettings.html",
+          "hash": "C6CFvpNRLZO7ez+MohP9Fb6l4dNEx68UzkDEIfNXhhw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Event_Management.MongodbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Event_Management.MongodbContext.html",
+          "hash": "dRKzfCfzdEeuzFVEnixHFi+W2gQPkCnEhIaqMx5GEc0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Event_Management.Program.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Event_Management.Program.html",
+          "hash": "z7f1DJQAU9F0Tf/GrbMvFBGqxFkTe8SLrVnx+NTEPOw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Event_Management.Services.EventService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Event_Management.Services.EventService.html",
+          "hash": "fgHKJu4B7DLzaBIrLmtjs62de8XVQtmL/TwORm4SE1k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Event_Management.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Event_Management.Services.html",
+          "hash": "S8d7dDlfmlqA8JDVOJOxL+ggPWFjJ0TvCQHcAUvE5Ds="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Event_Management.Startup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Event_Management.Startup.html",
+          "hash": "SXvvcIiPlJzqben/9ALE6jchM1P5N5VWlcVmM9cRhE0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Event_Management.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Event_Management.html",
+          "hash": "SzI0O7DjpSHzPtf7FyBQ4oBgU8hwAmQq2/Qflx5B+gY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "hu+xfPcPlqdHpvU23Qg6wGTWwW32fY/mHtpnUVAdglQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "xZayjQl9z2DfcqWtINDZqV2h1NI1lZLx/V8lA52so3M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "BaL6q/+tAP21P1BzinyEDVNc2FH6mqn+0TUzVU2FUNA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Sonar integration.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/Sonar integration.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/SonarscanReport.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/SonarscanReport.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "YkoYhx4shvHgmr/THz1odtXxTEDyVE6dFMV+bGtD+XE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "WSuRrYiGwKKMbtdG9z8W9fXmLoCyTnGg9AxbPKLXm2Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Disable incremental build by force rebuild option.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ForceRebuild"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 5,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 21,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
