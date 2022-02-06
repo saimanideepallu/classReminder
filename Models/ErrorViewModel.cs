@@ -1,5 +1,3 @@
-using System;
-
 namespace Event_Management.Models
 {
     public class ErrorViewModel

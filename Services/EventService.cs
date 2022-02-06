@@ -1,11 +1,8 @@
 ﻿using Event_Management.Models;
 using Event_Management.MongodbContext;
-using MongoDB.Bson;
 using MongoDB.Driver;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Event_Management.Services
 {
@@ -44,8 +41,9 @@ namespace Event_Management.Services
         public List<EventModel> Search(string eventName) =>
            _event.Find<EventModel>(e => e.EventName.Contains(eventName)).ToList();
 
-        public List<EventModel> SearchList(string userId) {
-         return _event.Find<EventModel>(e => e.UserID == userId).ToList();
+        public List<EventModel> SearchList(string userId)
+        {
+            return _event.Find<EventModel>(e => e.UserID == userId).ToList();
         }
 
     }

@@ -1,14 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
-using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
 using System;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Web;
 
 namespace Event_Management.Models
 {
     public class EventsCreateViewModel
-    {      
+    {
         public string Id { get; set; }
         public string EventName { get; set; }
         public string Location { get; set; }

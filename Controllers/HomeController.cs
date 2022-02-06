@@ -18,7 +18,7 @@ namespace Event_Management.Controllers
         {
             _logger = logger;
             _eventService = eventService;
-        }        
+        }
 
         public IActionResult Index()
         {
@@ -31,7 +31,7 @@ namespace Event_Management.Controllers
             }
             return View(list);
         }
-                    
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

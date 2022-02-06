@@ -3,10 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Event_Management.Controllers
@@ -30,7 +27,7 @@ namespace Event_Management.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login([Required][EmailAddress] string email, [Required] string password,string returnUrl)
+        public async Task<IActionResult> Login([Required][EmailAddress] string email, [Required] string password, string returnUrl)
         {
             if (ModelState.IsValid)
             {
@@ -39,14 +36,14 @@ namespace Event_Management.Controllers
                 {
                     if (string.IsNullOrEmpty(HttpContext.Session.GetString("UserId")))
                     {
-                        HttpContext.Session.SetString("UserId",appUser.Id.ToString());
+                        HttpContext.Session.SetString("UserId", appUser.Id.ToString());
                     }
-                    Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(appUser, password,false,false);
+                    Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(appUser, password, false, false);
                     if (result.Succeeded)
                     {
-                        
+
                         return Redirect(returnUrl ?? "/");
-                    }                
+                    }
                 }
                 ModelState.AddModelError(nameof(email), "Login Failed: Invalid Email or Password");
             }

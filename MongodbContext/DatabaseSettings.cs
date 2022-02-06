@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Event_Management.MongodbContext
+﻿namespace Event_Management.MongodbContext
 {
     public class DatabaseSettings : IDatabaseSettings
     {

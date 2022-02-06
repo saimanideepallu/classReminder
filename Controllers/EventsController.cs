@@ -1,16 +1,12 @@
 ﻿using Event_Management.Models;
 using Event_Management.Services;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using MongoDB.Bson;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
-using Swashbuckle.AspNetCore.Annotations;
 
 namespace Event_Management.Controllers
 {
@@ -66,7 +62,7 @@ namespace Event_Management.Controllers
                         string imgFileName = Path.GetFileNameWithoutExtension(events.ImageFile.FileName);
                         string extension = Path.GetExtension(events.ImageFile.FileName);
                         imgFileName = imgFileName + DateTime.Now.ToString("yyMMssfff") + extension;
-                        string path = Path.Combine(wwwRootPath , "Image", imgFileName);
+                        string path = Path.Combine(wwwRootPath, "Image", imgFileName);
 
                         using (var fileStream = new FileStream(path, FileMode.Create))
                         {
@@ -211,7 +207,7 @@ namespace Event_Management.Controllers
 
                         if (ev.ImageName != null && ev.ImageName != "default")
                         {
-                            var oldImg = Path.Combine(wwwRootPath , "Image", ev.ImageName);
+                            var oldImg = Path.Combine(wwwRootPath, "Image", ev.ImageName);
                             if (System.IO.File.Exists(oldImg))
                             {
                                 System.IO.File.Delete(oldImg);
@@ -223,7 +219,7 @@ namespace Event_Management.Controllers
                             string imgFileName = Path.GetFileNameWithoutExtension(events.ImageFile.FileName);
                             string extension = Path.GetExtension(events.ImageFile.FileName);
                             imgFileName = imgFileName + DateTime.Now.ToString("yyMMssfff") + extension;
-                            string path = Path.Combine(wwwRootPath , "Image", imgFileName);
+                            string path = Path.Combine(wwwRootPath, "Image", imgFileName);
 
                             using (var fileStream = new FileStream(path, FileMode.Create))
                             {
@@ -239,7 +235,6 @@ namespace Event_Management.Controllers
 
                         ev.EventName = events.EventName;
                         ev.Location = events.Location;
-                        //obj.UserID = HttpContext.Session.GetString("UserId");
                         if (events.Recarsive == true)
                         {
                             List<string> list = new List<string>();
@@ -315,7 +310,7 @@ namespace Event_Management.Controllers
 
             if (ev.ImageName != null && ev.ImageName != "default")
             {
-                var oldImg = Path.Combine(wwwRootPath ,"Image", ev.ImageName);
+                var oldImg = Path.Combine(wwwRootPath, "Image", ev.ImageName);
                 if (System.IO.File.Exists(oldImg))
                 {
                     System.IO.File.Delete(oldImg);
