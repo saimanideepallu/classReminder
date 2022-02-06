@@ -88,23 +88,23 @@ namespace Event_Management.Controllers
                     if (events.Recarsive == true)
                     {
                         List<string> list = new List<string>();
-                        if (events.M == true)
+                        if (events.M)
                         {
                             list.Add(DayOfWeek.Monday.ToString());
                         }
-                        if (events.T == true)
+                        if (events.T)
                         {
                             list.Add(DayOfWeek.Tuesday.ToString());
                         }
-                        if (events.W == true)
+                        if (events.W)
                         {
                             list.Add(DayOfWeek.Wednesday.ToString());
                         }
-                        if (events.TH == true)
+                        if (events.TH)
                         {
                             list.Add(DayOfWeek.Thursday.ToString());
                         }
-                        if (events.F == true)
+                        if (events.F)
                         {
                             list.Add(DayOfWeek.Friday.ToString());
                         }
@@ -205,7 +205,7 @@ namespace Event_Management.Controllers
                     if (events != null)
                     {
                         string wwwRootPath = _hostEnviroment.WebRootPath;
-                        string[] days = { };
+                        string[] days = Array.Empty<string>();
 
                         var ev = _eventService.Get(events.Id);
 
@@ -247,19 +247,19 @@ namespace Event_Management.Controllers
                             {
                                 list.Add(DayOfWeek.Monday.ToString());
                             }
-                            if (events.T == true)
+                            if (events.T)
                             {
                                 list.Add(DayOfWeek.Tuesday.ToString());
                             }
-                            if (events.W == true)
+                            if (events.W)
                             {
                                 list.Add(DayOfWeek.Wednesday.ToString());
                             }
-                            if (events.TH == true)
+                            if (events.TH)
                             {
                                 list.Add(DayOfWeek.Thursday.ToString());
                             }
-                            if (events.F == true)
+                            if (events.F)
                             {
                                 list.Add(DayOfWeek.Friday.ToString());
                             }
