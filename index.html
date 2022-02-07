@@ -1,0 +1,62 @@
+@model IEnumerable<Event_Management.Models.EventModel>
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+    }
+</style>
+@{
+    <div class="pt-5 ">
+        <div class="card" style="width: 18rem;" role="main" id="bearcat_alert">
+            <img class="card-img-top" src="~/FASFA-Homepage-Graphic-22-23-01.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">P&F Class.</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-primary">Location: <span>Colden hall</span></li>
+                <li class="list-group-item bg-primary">Date: <span> @DateTime.Today</span></li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link">See more</a>
+            </div>
+        </div>
+    </div>
+    if (User.Identity.IsAuthenticated != false)
+    {
+        if (Model != null)
+        {
+            <div class="card-deck">
+                @foreach (var i in Model)
+                {
+                    <div class="card col-sm-4 border-dark">
+                        @if (i.ImageName != "")
+                        {
+                            <img src="@("Image/"+i.ImageName)" class="card-img-top" width="250px" height="250px">
+                        }
+                        else
+                        {
+                            <img src="Image/default.jpg" class="card-img-top" width="250px" height="250px">
+                        }
+                        <div class="card-body">
+                            <h5 class="card-title">@i.EventName</h5>
+                            <p class="card-text">@i.Location</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="Events/Edit/@i.Id" class="btn btn-primary btn-block">Edit</a>
+                        </div>
+                    </div>
+                }
+            </div>
+
+        }
+
+    }
+
+
+}
